@@ -1,31 +1,3 @@
- ### Symulator systemu kontroli dostępu RFID 
- Symulator systemu kontroli dostępu RFID umożliwia:
- * dodawanie czytnika do bazy 
- * przypisanie czytnika do drzwi 
- * dodanie listy użytkowników upoważnionych do wejścia do pomieszczenia  
- * przypisanie ID taga do danego użytkownika 
- * tworzenie harmonogramów dostępu
- 
-
-Projekt korzysta z bazy danych PostgreSQL: 
-https://www.postgresql.org/download/
-Dokumentacja znajduję się na GitLab Wiki:
-https://git.pg.edu.pl/pos_ikb/rfid_system/-/wikis/home
-
-Aby poprawnie uruchomić  projekt należy:
-* otworzyć projekt w Eclipse lub Visual Code
-* skonfigurować bazę danych PostgreSQL
-* W pliku AccesssController.java uzupełenić informacje dotyczące bazy danych tj. DB_URL
-USER
-PASS
-* Wejść do ustawień run configuration i podać parametry startowe dla aplikacji RFIDReadrerSimulator np.: --reader.name = "reader1"  --server.port=8081 
-* Powtórzyć poprzedni krok dla kolejnych instancji czytników
-* Uruchomić aplikację RFIDReaderSimulator
-* Uruchomić aplikację RFIDServer
-* Uruchomić aplikację RFIDServerWebInterface (domyślnie uruchamia się na localhost:8080)
-* W przeglądarce połączyć się z localhost:8080 i za pomocą GUI korzystać z funkcjonalności systemu.
-* Poprawność działania można sprawdzić łącząc się na localhost:8081 i weryfikując czy do czytnika reader1 mają dostęp tylko uprawnione tagi 
-
 # Symulator systemu kontroli dostępu RFID
 To repozytorium zawiera `Symulator systemu kontroli dostępu RFID` oraz aplikację serwerową wymaganą do poprawnego działania oprogramowania.
 
